@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Hola</h1>
+    <br>
+    {% for producto in producto %}
+        {{ producto.id }}, {{ producto.nombre }}, {{ producto.barra }}, 
+        {{ producto.precio }}, {{ producto.id_categoria.categoria }}, <br>
+    {% endfor %}
 </body>
 </html>

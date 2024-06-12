@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
+from .models import Producto, Categoria
 # Create your views here.
 
 
 
 def index(request):
-    return render(request, 'index.html')
+    producto= Producto.objects.all()
+    context={"producto":producto}
+    return render(request, 'index.html', context)
