@@ -16,6 +16,7 @@
         <ul>
             {% for servicio in servicios %}
                     <h2>{{ servicio }}</h2>
+                    <h4>ID: {{ servicio.id }} </h4>
                     <h4>Precio: ${{ servicio.precio }} 🛫 </h4>
                     {% if servicio.foto %}
                         <img src="{{ servicio.foto.url }}" alt="{{ servicio }}">
