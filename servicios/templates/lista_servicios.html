@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Turismo Extremo Sur</title>
+</head>
+<body>
+    <header>
+    <h1>Bienvenido a Turismo Extremo Sur</h1>
+    </header>
+
+    <div class="highlight">
+    <section>
+        <h2>¿Por qué elegir TurismoES?</h2>
+        <p>Somos una empresa dedicada a brindar experiencias únicas en destinos emocionantes alrededor del mundo.</p>
+    </section>
+
+    <section>
+        <h2>Nuestros Destinos</h2>
+        <p>Desde playas paradisíacas hasta ciudades históricas, tenemos una amplia gama de destinos para todos los gustos.</p>
+    </section>
+
+    <section>
+        <h2>¿Cómo veo los Servicios?</h2>
+        <p>Haz click en la parte inferior donde dice "Nuestros Servicios"</p>
+    </section>
+    </div>
+
+<footer>
+    <ul>
+        <a href="{% url 'nuestros_servicios' %}" class="footer-btn">Nuestros Servicios</a>
+    </ul>
+</footer>
+    
+</body>
+</html>

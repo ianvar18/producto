@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Nuestros Servicios</h1>
+    </header>
+    <div class="container">
+        <ul>
+            {% for servicio in servicios %}
+                    <h2>{{ servicio }}</h2>
+                    <h4>Precio: ${{ servicio.precio }} 🛫 </h4>
+                    {% if servicio.foto %}
+                        <img src="{{ servicio.foto.url }}" alt="{{ servicio }}">
+                    {% endif %}
+                    <h4>Descripción: {{ servicio.descripcion }}</h4>
+                    <br>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <ul>
+        <a href="{% url 'lista_servicios' %}" class="footer-btn">Volver al Inicio</a>
+        </ul>
+    </footer>
+</body>
+</html>
